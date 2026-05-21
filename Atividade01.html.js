@@ -7,3 +7,11 @@ elementoForm.addEventListener("submit", (e) => e.preventDefault());
 
     document.documentElement.style.setProperty("--primary-color", corNova);
  });
+
+ document.addEventListener("DOMContentLoaded", () => {
+     const rootStyles = window.getComputedStyle(document.documentElement);
+
+     const primaryColor = rootStyles.getPropertyValue("--primary-color").trim();
+
+     elementoCor.value = primaryColor;
+ });
